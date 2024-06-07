@@ -1,0 +1,16 @@
+{
+  "name": "cypress-split-gitlab-example",
+  "version": "1.0.0",
+  "description": "Split Cypress specs on GitLab CI",
+  "private": true,
+  "scripts": {
+    "test": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.11.0",
+    "cypress-split": "^1.24.0"
+  }
+}
