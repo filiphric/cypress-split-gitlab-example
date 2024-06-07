@@ -8,7 +8,6 @@ module.exports = defineConfig({
     fixturesFolder: false,
     setupNodeEvents(on, config) {
       cypressSplit(on, config)
-      // IMPORTANT: return the config object
       return config
     },
   },
