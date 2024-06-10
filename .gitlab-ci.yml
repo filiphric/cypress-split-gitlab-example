@@ -8,7 +8,7 @@ variables:
 
 test:
   image: 
-    name: node:latest
+    name: cypress/base:16.14.2-slim
     entrypoint: ['']
   stage: test
   parallel: 3
