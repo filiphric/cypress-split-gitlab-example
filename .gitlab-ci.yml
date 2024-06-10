@@ -1,14 +1,5 @@
 stages:
-  - build
   - test
-
-install:
-  image: 
-    name: cypress/base:16.14.2-slim
-    entrypoint: ['']
-  stage: build
-  script:
-    - npm ci
 
 test:
   image: 
@@ -17,5 +8,6 @@ test:
   stage: test
   parallel: 3
   script:
+    - npm ci
     - npm start & 
     - npx cypress run --env split=true --browser replay-chromium
