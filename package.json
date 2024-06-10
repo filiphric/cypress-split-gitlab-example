@@ -12,6 +12,7 @@
   "devDependencies": {
     "@replayio/cypress": "^2.1.2",
     "cypress": "^13.11.0",
-    "cypress-split": "^1.24.0"
+    "cypress-split": "^1.24.0",
+    "typescript": "^5.4.5"
   }
 }

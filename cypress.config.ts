@@ -1,14 +1,14 @@
 /// <reference types="cypress" />
 import { defineConfig } from 'cypress';
 import { plugin as replayPlugin, wrapOn } from '@replayio/cypress';
-import 'cypress-split'
+const cypressSplit = require('cypress-split')
 
 export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:3003',
     fixturesFolder: false,
-    supportFile: 'cypress/support.ts',
-    setupNodeEvents(on, config) {
+    supportFile: false,
+    setupNodeEvents(cyOn, config) {
       const on = wrapOn(cyOn)
       cypressSplit(on, config)
       replayPlugin(on, config, {
