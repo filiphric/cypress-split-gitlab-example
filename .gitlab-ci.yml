@@ -17,4 +17,5 @@ test:
   stage: test
   parallel: 3
   script:
+    - npm start & 
     - npx cypress run --env split=true --browser replay-chromium
