@@ -4,7 +4,9 @@
   "description": "Split Cypress specs on GitLab CI",
   "private": true,
   "scripts": {
-    "test": "cypress run"
+    "test": "cypress run",
+    "start": "cd app && npm run dev",
+    "postinstall": "cd app && npm i"
   },
   "keywords": [],
   "author": "",
