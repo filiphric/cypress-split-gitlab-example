@@ -2,15 +2,15 @@
 // https://on.cypress.io/intelligent-code-completion
 /// <reference types="cypress" />
 
-it('runs test A1', () => {
+it('Checks sums in table', () => {
 
   const toStrings = (cells$) => Cypress._.map(cells$, 'textContent')
   const toNumbers = (texts) => Cypress._.map(texts, Number)
   const sum = (numbers) => Cypress._.sum(numbers)
   
-
   cy.visit('/')
-
+  cy.get('table')
+    .should('be.visible')
 
   cy.get('[data-cy=value]')
     .then(toStrings)

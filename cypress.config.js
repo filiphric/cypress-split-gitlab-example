@@ -7,7 +7,6 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: 'http://localhost:3003',
     fixturesFolder: false,
-    supportFile: false,
     setupNodeEvents(cyOn, config) {
       const on = wrapOn(cyOn);
       cypressSplit(on, config);
