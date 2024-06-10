@@ -1,9 +1,14 @@
 stages:
   - test
 
+variables:
+  npm_config_cache: '$CI_PROJECT_DIR/.npm'
+  CYPRESS_CACHE_FOLDER: '$CI_PROJECT_DIR/cache/Cypress'
+  REPLAY_API_KEY: $REPLAY_API_KEY
+
 test:
   image: 
-    name: cypress/base:16.14.2-slim
+    name: node:latest
     entrypoint: ['']
   stage: test
   parallel: 3
