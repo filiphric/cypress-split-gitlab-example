@@ -5,7 +5,6 @@ const cypressSplit = require('cypress-split');
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'http://localhost:3003',
     fixturesFolder: false,
     setupNodeEvents(cyOn, config) {
       const on = wrapOn(cyOn);

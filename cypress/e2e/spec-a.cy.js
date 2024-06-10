@@ -8,7 +8,7 @@ it('Checks sums in table', () => {
   const toNumbers = (texts) => Cypress._.map(texts, Number)
   const sum = (numbers) => Cypress._.sum(numbers)
   
-  cy.visit('/')
+  cy.visit('http://localhost:3003')
   cy.get('table')
     .should('be.visible')
 
