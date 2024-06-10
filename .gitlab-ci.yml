@@ -3,13 +3,17 @@ stages:
   - test
 
 install:
-  image: cypress/base:16.14.2-slim
+  image: 
+    name: cypress/base:16.14.2-slim
+    entrypoint: ['']
   stage: build
   script:
     - npm ci
 
 test:
-  image: cypress/base:16.14.2-slim
+  image: 
+    name: cypress/base:16.14.2-slim
+    entrypoint: ['']
   stage: test
   parallel: 3
   script:
